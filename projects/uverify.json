@@ -1,0 +1,68 @@
+{
+  "projectName": "UVerify",
+  "labelPrefix": "UVerify",
+  "website": "https://uverify.io",
+  "twitter": "uvfyhq",
+  "discord": "https://discord.gg/Dvqkynn6xc",
+  "github": "https://github.com/UVerify-io",
+  "category": "TOOLS",
+  "description": "UVerify records tamper-proof fingerprints on Cardano. Every certificate is a dApp.",
+  "contracts": [
+    {
+      "name": "Library",
+      "version": 1,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "20c3394ac4946a389853a545719ea3080c494e578903239c36bd8b0b",
+      "description": "Reference script holder that stores the proxy and state validators on-chain for transaction efficiency"
+    },
+    {
+      "name": "Proxy",
+      "version": 1,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "07d07e14f58a908a89d065faa28c969f4e1b7174b0075e233127f270",
+      "description": "Ensures every UVerify state is issued under its policy, enabling upgradeability and simplified off-chain scoped indexing"
+    },
+    {
+      "name": "State V1",
+      "version": 1,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "499b5f203848362b46c6e0958e8ef318fe5f928f880b6c1baf9f6d7e",
+      "description": "Holds the business logic for certificate issuance and updates, parameterized per proxy version to enforce protocol rules on-chain"
+    },
+    {
+      "name": "Auth Token V0",
+      "version": 0,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "a8172157733dd50ef6f0f8d38e361745037f0a79c1f5da9b1d8079ff",
+      "description": "Legacy authorization token minting policy. Deprecated; still indexed by the UVerify scoped indexer until early 2026"
+    },
+    {
+      "name": "Issue State V0",
+      "version": 0,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "1919c122cba719a9bf760e4e463bbcf8a3d46327569cdb5edd8b7d0e",
+      "description": "Legacy minting policy for issuing user state tokens. Deprecated; still indexed by the UVerify scoped indexer until early 2026"
+    },
+    {
+      "name": "Update State V0",
+      "version": 0,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "314cdf9ea60ee354ff1b87da74f15dedd4070604b2819a1d6bac3453",
+      "description": "Legacy minting policy for updating user state tokens. Deprecated; still indexed by the UVerify scoped indexer until early 2026"
+    },
+    {
+      "name": "Connected Goods V0",
+      "version": 0,
+      "language": "PLUTUS",
+      "languageVersion": 3,
+      "scriptHash": "2be4b4dccb1e87fbb81f5e3ec518646792b1909c7add563bc162f97b",
+      "description": "Legacy Connected Goods certificate policy used for BuidlerFest 2025 shirts. Still indexed by the UVerify scoped indexer until early 2026"
+    }
+  ]
+}
